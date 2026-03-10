@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import "./HomePage.css";
-
+// 
 const API_URL = "http://localhost:9999";
-
+//
 const HomePage = () => {
   const [products, setProducts] = useState([]);
   const userId = 1; 
-
+//
   useEffect(() => {
     fetch(`${API_URL}/products`)
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.log("Lỗi fetch products:", err));
   }, []);
-
+//
   const addToCart = async (product) => {
     try {
       const res = await fetch(`${API_URL}/carts?userId=${userId}`);
@@ -34,7 +34,7 @@ const HomePage = () => {
             quantity: 1,
           });
         }
-
+//
         await fetch(`${API_URL}/carts/${cart.id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -61,7 +61,7 @@ const HomePage = () => {
       console.log("Lỗi addToCart:", error);
     }
   };
-
+//
   return (
     <div className="home-container">
       <h2 className="title">Danh sách sản phẩm</h2>
