@@ -1,13 +1,24 @@
 {
   "categories": [
-    { "id": 1, "name": "Hoa quả", "slug": "hoa-qua" },
-    { "id": 2, "name": "Thức uống", "slug": "thuc-uong" },
-    { "id": 3, "name": "Đồ ăn", "slug": "do-an" }
+    {
+      "id": "1",
+      "name": "Hoa quả",
+      "slug": "hoa-qua"
+    },
+    {
+      "id": "2",
+      "name": "Thức uống",
+      "slug": "thuc-uong"
+    },
+    {
+      "id": "3",
+      "name": "Đồ ăn",
+      "slug": "do-an"
+    }
   ],
-
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Táo Fuji",
       "price": 45000,
       "stock": 100,
@@ -16,7 +27,7 @@
       "description": "Táo Fuji nhập khẩu, giòn ngọt."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Chuối Cavendish",
       "price": 30000,
       "stock": 120,
@@ -25,7 +36,7 @@
       "description": "Chuối chín tự nhiên, giàu dinh dưỡng."
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Cam Sành",
       "price": 40000,
       "stock": 80,
@@ -34,7 +45,7 @@
       "description": "Cam tươi mọng nước."
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Coca Cola 330ml",
       "price": 10000,
       "stock": 200,
@@ -43,7 +54,7 @@
       "description": "Nước giải khát có gas."
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Trà Xanh Không Độ",
       "price": 12000,
       "stock": 150,
@@ -52,7 +63,7 @@
       "description": "Trà xanh thanh mát."
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Sữa Tươi Vinamilk",
       "price": 32000,
       "stock": 90,
@@ -61,7 +72,7 @@
       "description": "Sữa tươi tiệt trùng 1L."
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Mì Hảo Hảo",
       "price": 4000,
       "stock": 300,
@@ -70,7 +81,7 @@
       "description": "Mì ăn liền vị tôm chua cay."
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Bánh Oreo",
       "price": 18000,
       "stock": 140,
@@ -79,7 +90,7 @@
       "description": "Bánh quy socola nhân kem."
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Xúc Xích Đức",
       "price": 55000,
       "stock": 60,
@@ -88,44 +99,49 @@
       "description": "Xúc xích tươi cao cấp."
     }
   ],
-
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Nguyễn Văn A",
       "email": "user@gmail.com",
       "password": "123456",
       "role": "customer"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Admin",
       "email": "admin@gmail.com",
       "password": "admin123",
       "role": "admin"
     }
   ],
-
   "carts": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 1,
       "items": [
         {
           "productId": 1,
-          "quantity": 2
+          "quantity": 3
         },
         {
           "productId": 4,
           "quantity": 3
+        },
+        {
+          "productId": "1",
+          "quantity": 1
+        },
+        {
+          "productId": "2",
+          "quantity": 1
         }
       ]
     }
   ],
-
   "orders": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 1,
       "totalAmount": 120000,
       "status": "completed",
