@@ -1,53 +1,160 @@
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDownToast {
+  0% { transform: translate(-50%, -50px) scale(0.9); opacity: 0; }
+  100% { transform: translate(-50%, 20px) scale(1); opacity: 1; }
+}
+
+@keyframes slideUpToast {
+  0% { transform: translate(-50%, 20px) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -50px) scale(0.9); opacity: 0; }
+}
+
 .home-container {
   padding: 40px 60px;
+  background-color: #f4f7f6;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  position: relative;
 }
 
 .title {
   margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #2c3e50;
+  animation: fadeInUp 0.5s ease forwards;
 }
-
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+  /* Tính toán dạng lưới Responsive siêu mượt */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
 }
 
 .product-card {
   background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   text-align: center;
-  transition: 0.3s;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.image-wrapper {
+  overflow: hidden;
+  height: 220px;
+  width: 100%;
 }
 
 .product-card img {
   width: 100%;
-  height: 180px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+.product-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: white;
+}
+
+.product-info h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.product-card:hover .product-info h3 {
+  color: #27ae60;
 }
 
 .price {
   color: #e74c3c;
-  font-weight: bold;
-  margin: 10px 0;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 20px 0;
 }
 
-button {
-  padding: 8px 14px;
-  background-color: #27ae60;
+.add-cart-btn {
+  margin-top: auto;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
   border: none;
   color: white;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 10px rgba(39, 174, 96, 0.2);
 }
 
-button:hover {
-  background-color: #1e8449;
+.add-cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
+}
+
+.add-cart-btn:active {
+  transform: translateY(1px) scale(0.96);
+  box-shadow: 0 2px 5px rgba(39, 174, 96, 0.2);
+}
+
+/* Toast Notification Styles - Thay thế cho Alert */
+.toast-notification {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50px) scale(0.9);
+  background: white;
+  padding: 16px 28px;
+  border-radius: 50px; /* Bo bỏng hợp thời */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.5s;
+}
+
+.toast-notification.show {
+  visibility: visible;
+  animation: slideDownToast 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Ẩn mượt mà khi hết show */
+.toast-notification:not(.show) {
+  animation: slideUpToast 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.toast-notification span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
 }

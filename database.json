@@ -119,12 +119,7 @@
     {
       "id": "1",
       "userId": 1,
-      "items": [
-        {
-          "productId": "3",
-          "quantity": 12
-        }
-      ]
+      "items": []
     }
   ],
   "orders": [
