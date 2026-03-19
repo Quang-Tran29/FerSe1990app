@@ -1,0 +1,164 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Hoa quả",
+      "slug": "hoa-qua"
+    },
+    {
+      "id": "2",
+      "name": "Thức uống",
+      "slug": "thuc-uong"
+    },
+    {
+      "id": "3",
+      "name": "Đồ ăn",
+      "slug": "do-an"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Táo Fuji",
+      "price": 45000,
+      "stock": 100,
+      "categoryId": 1,
+      "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/390/808/products/tao-fujji-ae0e548e6dad48938bd3b4e860850ed9.jpg?v=1593677607867",
+      "description": "Táo Fuji nhập khẩu, giòn ngọt."
+    },
+    {
+      "id": "2",
+      "name": "Chuối Cavendish",
+      "price": 30000,
+      "stock": 120,
+      "categoryId": 1,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLWh-E-5rCitwZiTaKzesMB6kupUh0TRu1FQ&s",
+      "description": "Chuối chín tự nhiên, giàu dinh dưỡng."
+    },
+    {
+      "id": "3",
+      "name": "Cam Sành",
+      "price": 40000,
+      "stock": 80,
+      "categoryId": 1,
+      "image": "https://product.hstatic.net/200000401369/product/cam-sanh-tui-1kg-3-4-trai-202205111923328302_265e2f81b3eb4185b0e43ceca25dafda_1024x1024.jpg",
+      "description": "Cam tươi mọng nước."
+    },
+    {
+      "id": "4",
+      "name": "Coca Cola 330ml",
+      "price": 10000,
+      "stock": 200,
+      "categoryId": 2,
+      "image": "https://www.coca-cola.com/content/dam/onexp/vn/vi/brands/coca-cola/vn-coca-cola.png",
+      "description": "Nước giải khát có gas."
+    },
+    {
+      "id": "5",
+      "name": "Trà Xanh Không Độ",
+      "price": 12000,
+      "stock": 150,
+      "categoryId": 2,
+      "image": "https://cdnv2.tgdd.vn/bhx-static/bhx/Products/Images/8938/85739/bhx/fgjiol_202410140914265805.jpg",
+      "description": "Trà xanh thanh mát."
+    },
+    {
+      "id": "6",
+      "name": "Sữa Tươi Vinamilk",
+      "price": 32000,
+      "stock": 90,
+      "categoryId": 2,
+      "image": "https://bizweb.dktcdn.net/thumb/grande/100/469/765/products/202308121800312745.jpg",
+      "description": "Sữa tươi tiệt trùng 1L."
+    },
+    {
+      "id": "7",
+      "name": "Mì Hảo Hảo",
+      "price": 4000,
+      "stock": 300,
+      "categoryId": 3,
+      "image": "https://cdnv2.tgdd.vn/bhx-static/bhx/Products/Images/2565/85959/bhx/slide-1_202410151356065341.jpg",
+      "description": "Mì ăn liền vị tôm chua cay."
+    },
+    {
+      "id": "8",
+      "name": "Bánh Oreo",
+      "price": 18000,
+      "stock": 140,
+      "categoryId": 3,
+      "image": "https://product.hstatic.net/1000141988/product/banh_oreo_vi_kem_viet_quat_thanh_119.6_g__i0015900__0cf3ecfd514546259dbc3ea043c79a47_master.png",
+      "description": "Bánh quy socola nhân kem."
+    },
+    {
+      "id": "9",
+      "name": "Xúc Xích Đức",
+      "price": 55000,
+      "stock": 60,
+      "categoryId": 3,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqiIUK69ak3z3peswmS6VVOgMsDuWSlm3low&s",
+      "description": "Xúc xích tươi cao cấp."
+    },
+    {
+      "id": "10",
+      "image": "https://bizweb.dktcdn.net/thumb/grande/100/091/032/products/web-11.jpg?v=1638530143963",
+      "name": "Sườn",
+      "categoryId": 3,
+      "price": 50000,
+      "stock": 10,
+      "description": "Sườn ngon bro"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Nguyễn Văn A",
+      "email": "user@gmail.com",
+      "password": "123456",
+      "role": "customer"
+    },
+    {
+      "id": "2",
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "role": "admin"
+    }
+  ],
+  "carts": [
+    {
+      "id": "1",
+      "userId": 1,
+      "items": [
+        {
+          "productId": 1,
+          "quantity": 2
+        },
+        {
+          "productId": 4,
+          "quantity": 3
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": 1,
+      "totalAmount": 120000,
+      "status": "completed",
+      "createdAt": "2026-03-01",
+      "items": [
+        {
+          "productId": 2,
+          "quantity": 2,
+          "price": 30000
+        },
+        {
+          "productId": 5,
+          "quantity": 5,
+          "price": 12000
+        }
+      ]
+    }
+  ]
+}
