@@ -1,0 +1,167 @@
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f5f5f5;
+}
+
+/* container */
+.detail-container{
+  max-width:1200px;
+  margin:40px auto;
+  padding:30px;
+  background:white;
+  border-radius:20px;
+}
+
+/* card */
+.detail-card{
+  display:flex;
+  gap:60px;
+  align-items:flex-start;
+}
+
+/* image */
+.detail-image img{
+  width:420px;
+  border-radius:10px;
+}
+
+/* info */
+.detail-info{
+  flex:1;
+}
+
+/* title */
+.product-title{
+  font-size:36px;
+  font-weight:bold;
+  margin-bottom:10px;
+  color:black;
+}
+
+/* price */
+.price{
+  font-size:32px;
+  color:#e53935;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+/* description */
+.description{
+  margin-bottom:20px;
+  font-size:16px;
+}
+
+/* row giống Shopee */
+.info-row{
+  display:flex;
+  margin:15px 0;
+}
+
+/* label bên trái */
+.label{
+  width:180px;
+  color:#777;
+}
+
+/* voucher */
+.voucher{
+  background:#ffe8e8;
+  color:#e53935;
+  padding:5px 10px;
+  border-radius:5px;
+  font-weight:bold;
+}
+
+/* ship */
+.ship{
+  color:#00a650;
+  font-weight:500;
+}
+
+.note{
+  font-size:13px;
+  color:#888;
+}
+
+/* quantity row */
+.quantity-row{
+  display:flex;
+  align-items:center;
+  margin-top:20px;
+}
+
+/* quantity */
+.quantity{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.quantity button{
+  width:40px;
+  height:40px;
+  border:none;
+  background:#34a853;
+  color:white;
+  font-size:18px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.quantity span{
+  width:40px;
+  text-align:center;
+  font-size:18px;
+}
+
+/* stock */
+.stock{
+  margin-left:20px;
+  color:#555;
+  font-weight:500;
+}
+
+/* buttons */
+.buttons{
+  margin-top:20px;
+  display:flex;
+  gap:20px;
+}
+
+/* add cart */
+.cart-btn{
+  background:#ff9800;
+  border:none;
+  padding:14px 30px;
+  color:white;
+  font-size:16px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.cart-btn:hover{
+  background:#fb8c00;
+}
+
+/* buy */
+.buy-btn{
+  background:#e53935;
+  border:none;
+  padding:14px 30px;
+  color:white;
+  font-size:16px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.buy-btn:hover{
+  background:#d32f2f;
+}
+
+/* bỏ gạch chân link */
+a{
+  text-decoration:none;
+  color:black;
+}
