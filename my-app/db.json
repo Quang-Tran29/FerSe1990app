@@ -97,15 +97,6 @@
       "categoryId": 3,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqiIUK69ak3z3peswmS6VVOgMsDuWSlm3low&s",
       "description": "Xúc xích tươi cao cấp."
-    },
-    {
-      "id": "10",
-      "image": "https://bizweb.dktcdn.net/thumb/grande/100/091/032/products/web-11.jpg?v=1638530143963",
-      "name": "Sườn",
-      "categoryId": 3,
-      "price": 50000,
-      "stock": 10,
-      "description": "Sườn ngon bro"
     }
   ],
   "users": [
@@ -144,21 +135,92 @@
     {
       "id": "1",
       "userId": 1,
+      "orderCode": "ORD-20260301-001",
+      "customerName": "Nguyễn Văn A",
+      "customerPhone": "0909123456",
+      "shippingAddress": "12 Nguyễn Trãi, Q1, TP.HCM",
+      "paymentMethod": "cod",
       "totalAmount": 120000,
       "status": "completed",
-      "createdAt": "2026-03-01",
+      "createdAt": "2026-03-01 09:40:00",
       "items": [
         {
           "productId": 2,
+          "productName": "Chuối Cavendish",
           "quantity": 2,
           "price": 30000
         },
         {
           "productId": 5,
+          "productName": "Trà Xanh Không Độ",
           "quantity": 5,
           "price": 12000
         }
       ]
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "orderCode": "ORD-20260324-002",
+      "customerName": "Nguyễn Văn A",
+      "customerPhone": "0909123456",
+      "shippingAddress": "12 Nguyễn Trãi, Q1, TP.HCM",
+      "paymentMethod": "banking",
+      "totalAmount": 81000,
+      "status": "processing",
+      "createdAt": "2026-03-24 14:25:00",
+      "items": [
+        {
+          "productId": 1,
+          "productName": "Táo Fuji",
+          "quantity": 1,
+          "price": 45000
+        },
+        {
+          "productId": 8,
+          "productName": "Bánh Oreo",
+          "quantity": 2,
+          "price": 18000
+        }
+      ]
+    }
+  ],
+  "orderDetails": [
+    {
+      "id": "1",
+      "orderId": "1",
+      "productId": 2,
+      "productName": "Chuối Cavendish",
+      "quantity": 2,
+      "price": 30000,
+      "subtotal": 60000
+    },
+    {
+      "id": "2",
+      "orderId": "1",
+      "productId": 5,
+      "productName": "Trà Xanh Không Độ",
+      "quantity": 5,
+      "price": 12000,
+      "subtotal": 60000
+    },
+    {
+      "id": "3",
+      "orderId": "2",
+      "productId": 1,
+      "productName": "Táo Fuji",
+      "quantity": 1,
+      "price": 45000,
+      "subtotal": 45000
+    },
+    {
+      "id": "4",
+      "orderId": "2",
+      "productId": 8,
+      "productName": "Bánh Oreo",
+      "quantity": 2,
+      "price": 18000,
+      "subtotal": 36000
     }
   ]
 }

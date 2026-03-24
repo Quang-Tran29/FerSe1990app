@@ -11,6 +11,7 @@ function Home() {
   // 1. Thêm state để lưu từ khóa tìm kiếm
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const isAdmin = Boolean(localStorage.getItem("adminUserId"));
 
   const loadData = () => {
     fetch(`${API}/products`)
@@ -249,28 +250,34 @@ function Home() {
           </div>
         )}
       </div>
-      <button
-        type="button"
-        style={deleteButtonStyle}
-        onClick={(e) => {
-          e.stopPropagation();
-          onDelete(product.id);
-        }}
-      >
-        Xóa
-      </button>
+      {isAdmin && (
+        <button
+          type="button"
+          style={deleteButtonStyle}
+          onClick={(e) => {
+            e.stopPropagation();
+            onDelete(product.id);
+          }}
+        >
+          Xóa
+        </button>
+      )}
     </div>
   );
 
   return (
     <div style={wrapperStyle}>
       <div style={topControlsStyle}>
-        <Link to="/create" style={actionButtonStyle}>
-          Thêm mới sản phẩm
-        </Link>
-        <Link to="/create-category" style={actionButtonStyle}>
-          Thêm mới danh mục
-        </Link>
+        {isAdmin && (
+          <>
+            <Link to="/admin/create" style={actionButtonStyle}>
+              Thêm mới sản phẩm
+            </Link>
+            <Link to="/admin/create-category" style={actionButtonStyle}>
+              Thêm mới danh mục
+            </Link>
+          </>
+        )}
 
         <input 
           type="text" 

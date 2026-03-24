@@ -81,16 +81,16 @@ function AdminLayout() {
   const handleLogout = () => {
     localStorage.removeItem("adminUserId");
     localStorage.removeItem("adminEmail");
-    window.location.href = "/";
+    window.location.href = "/login";
   };
 
   return (
     <div style={layoutStyle}>
       <aside style={sidebarStyle}>
-        <div style={logoStyle}>Mini Mart Admin</div>
+        <div style={logoStyle}>SuperMarket Admin</div>
         <nav style={navStyle}>
           <NavLink
-            to="/"
+            to="/admin"
             end
             style={({ isActive }) => ({
               ...navItemBase,
@@ -103,7 +103,7 @@ function AdminLayout() {
             Quản lý sản phẩm
           </NavLink>
           <NavLink
-            to="/users"
+            to="/admin/users"
             style={({ isActive }) => ({
               ...navItemBase,
               backgroundColor: isActive ? "rgba(248, 250, 252, 0.12)" : "transparent",
@@ -115,7 +115,7 @@ function AdminLayout() {
             Quản lý người dùng
           </NavLink>
           <NavLink
-            to="/inventory"
+            to="/admin/inventory"
             style={({ isActive }) => ({
               ...navItemBase,
               backgroundColor: isActive ? "rgba(248, 250, 252, 0.12)" : "transparent",
@@ -126,6 +126,18 @@ function AdminLayout() {
           >
             Quản lý kho
           </NavLink>
+          <NavLink
+            to="/admin/orders"
+            style={({ isActive }) => ({
+              ...navItemBase,
+              backgroundColor: isActive ? "rgba(248, 250, 252, 0.12)" : "transparent",
+              border: isActive
+                ? "1px solid rgba(248, 250, 252, 0.35)"
+                : "1px solid transparent",
+            })}
+          >
+            Quản lý đơn hàng
+          </NavLink>
         </nav>
       </aside>
       <main style={contentWrapperStyle}>
@@ -133,7 +145,7 @@ function AdminLayout() {
           <div>
             <div style={titleStyle}>Bảng điều khiển quản trị</div>
             <div style={subtitleStyle}>
-              Quản lý sản phẩm, người dùng và tồn kho của cửa hàng.
+              Quản lý sản phẩm, người dùng, tồn kho và đơn hàng của cửa hàng.
             </div>
           </div>
           <button type="button" style={logoutButtonStyle} onClick={handleLogout}>

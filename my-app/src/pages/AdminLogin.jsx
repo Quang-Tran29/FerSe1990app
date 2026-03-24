@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const API = "http://localhost:9999";
 
@@ -75,7 +74,6 @@ const errorStyle = {
 };
 
 function AdminLogin() {
-  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");

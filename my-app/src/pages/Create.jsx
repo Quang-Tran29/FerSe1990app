@@ -60,7 +60,7 @@ function Create() {
       body: JSON.stringify(payload),
     })
       .then((res) => res.json())
-      .then(() => navigate("/"))
+      .then(() => navigate("/admin"))
       .catch((err) => console.error(err));
   };
 

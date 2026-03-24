@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
 import AdminLogin from "./AdminLogin";
 
 const API = "http://localhost:9999";
