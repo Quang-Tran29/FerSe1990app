@@ -1,0 +1,114 @@
+/* TỔNG THỂ FOOTER - BÉ LẠI */
+.main-footer {
+  background-color: #ffffff;
+  padding: 40px 0 20px; /* Giảm padding từ 80px xuống 40px */
+  border-top: 1px solid #eee;
+  margin-top: 50px;
+  color: #666;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+  max-width: 1100px; /* Thu hẹp chiều rộng tổng */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr; /* Chia lại tỉ lệ cột */
+  gap: 30px; /* Giảm khoảng cách giữa các cột */
+  padding: 0 20px;
+}
+
+/* LOGO - NHỎ GỌN */
+.footer-logo {
+  font-size: 22px; /* Bé lại */
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.footer-logo span {
+  color: #27ae60;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  font-size: 14px; /* Chữ nhỏ lại */
+}
+
+/* TIÊU ĐỀ MỤC */
+.footer-section h3 {
+  color: #333;
+  font-size: 16px; /* Bé lại */
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase; /* Làm tiêu đề trông chuyên nghiệp hơn */
+  letter-spacing: 0.5px;
+}
+
+/* LIST LINKS */
+.footer-section ul li {
+  margin-bottom: 8px; /* Thu hẹp khoảng cách dòng */
+}
+
+.footer-section ul li a {
+  color: #777;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-section ul li a:hover {
+  color: #27ae60;
+}
+
+/* SOCIAL ICONS - NHỎ VÀ TINH TẾ */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  width: 32px; /* Bé lại */
+  height: 32px; /* Bé lại */
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: #555;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #e8f5e9;
+  color: #27ae60;
+  transform: translateY(-2px);
+}
+
+/* PHẦN CONTACT - GỌN GÀNG */
+.footer-section.contact p {
+  font-size: 13.5px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-section.contact i {
+  color: #27ae60;
+  width: 15px;
+  font-size: 14px;
+}
+
+/* BẢN QUYỀN */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #f5f5f5;
+  font-size: 12px;
+  color: #999;
+}
+
+
